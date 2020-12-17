@@ -1,5 +1,4 @@
 ---
-
 # create letsencrypt certificates with acme.sh
 
 - name: create cert directory
@@ -11,7 +10,7 @@
     state: directory
   loop:
     - "{{ tls_certificate_file | dirname }}"
-    - "{{ tls_certificate_directory }}" 
+    - "{{ tls_certificate_directory }}"
 
 - name: check acme.sh is installed
   stat:
@@ -34,7 +33,7 @@
     command: |
       ./acme.sh
         --install
-        --home "{{ certificates_acmesh_dir }}" 
+        --home "{{ certificates_acmesh_dir }}"
         --config-home {{ certificates_acmesh_dir }}/conf
         --cert-home {{ certificates_acmesh_dir }}/certs
     args:
@@ -70,4 +69,3 @@
 
 - debug: var=acme_get
   when: tls_certificate_test
-

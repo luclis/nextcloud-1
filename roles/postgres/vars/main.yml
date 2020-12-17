@@ -1,5 +1,5 @@
 ---
-# vars file for postgres
+# vars file for postgreSQL
 
 postgres_run_dir: "/var/run/postgresql"
 postgres_allowed_ipv4: "{{ hostvars[groups['nextcloud'][0]].ansible_default_ipv4.address }}"
@@ -24,7 +24,7 @@ postgresql_hba_entries:
 postgresql_yum_repo_rpm:
   CentOS: https://download.postgresql.org/pub/repos/yum/{{ postgresql_version }}/redhat/rhel-{{ ansible_distribution_major_version|int }}-x86_64/pgdg-redhat-repo-latest.noarch.rpm
   Fedora: https://download.postgresql.org/pub/repos/yum/{{ postgresql_version }}/fedora/fedora-{{ ansible_distribution_major_version|int }}-x86_64/pgdg-fedora-repo-latest.noarch.rpm
-  
+
 postgresql_packages:
   CentOS:
     - postgresql{{ postgresql_version }}
@@ -52,7 +52,7 @@ postgresql_packages:
     - libpq-dev
     - python3-psycopg2
 
-postgresql_data_dir: 
+postgresql_data_dir:
   Amazon: "/var/lib/pgsql/data"
   CentOS: "/var/lib/pgsql/{{ postgresql_version }}/data"
   Fedora: "/var/lib/pgsql/{{ postgresql_version }}/data"
@@ -66,19 +66,19 @@ postgresql_bin_path:
   Debian: "/usr/lib/postgresql/{{ postgresql_version }}/bin"
   Ubuntu: "/usr/lib/postgresql/{{ postgresql_version }}/bin"
 
-postgresql_config_path: 
+postgresql_config_path:
   Amazon: "/var/lib/pgsql/data"
   CentOS: "/var/lib/pgsql/{{ postgresql_version }}/data"
   Fedora: "/var/lib/pgsql/{{ postgresql_version }}/data"
   Debian: "/etc/postgresql/{{ postgresql_version }}/main"
   Ubuntu: "/etc/postgresql/{{ postgresql_version }}/main"
 
-postgresql_daemon: 
+postgresql_daemon:
   Amazon: postgresql
   CentOS: postgresql-{{ postgresql_version }}
   Fedora: postgresql-{{ postgresql_version }}
   Debian: "postgresql@{{ postgresql_version }}-main"
   Ubuntu: postgresql
-  
+
 postgresql_locales:
   - 'en_US.UTF-8'

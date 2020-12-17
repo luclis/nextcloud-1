@@ -27,7 +27,7 @@ redis_tcp:
   port:    "6379"
 
 # Some common variables used in more then roles
- 
+
 web_user:
   apache:
     RedHat: "apache"

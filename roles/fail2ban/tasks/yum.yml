@@ -1,10 +1,9 @@
 ---
-
-# yum related tasks
+# yum related OS tasks
 
 - name: install fail2ban
-  yum: 
-    name: 
+  yum:
+    name:
       - fail2ban
       - fail2ban-firewalld
       - fail2ban-server
@@ -12,4 +11,3 @@
     state: latest
   vars:
     ansible_python_interpreter: python2
-

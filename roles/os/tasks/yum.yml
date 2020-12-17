@@ -1,5 +1,5 @@
 ---
-# yum related os tasks
+# yum related OS tasks
 
 - name: add amazon epel repo
   shell: amazon-linux-extras install epel
@@ -26,7 +26,7 @@
       - wget
       - firewalld
     state: latest
-    enablerepo: epel 
+    enablerepo: epel
   vars:
     ansible_python_interpreter: python2
 
@@ -47,4 +47,3 @@
     state: latest
   vars:
     ansible_python_interpreter: python2
-

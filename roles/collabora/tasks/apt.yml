@@ -16,7 +16,7 @@
 
 - name: install collabora
   apt:
-    name: 
+    name:
       - "loolwsd"
       - "code-brand"
       - "python3-lxml"

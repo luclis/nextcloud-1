@@ -11,7 +11,7 @@
     checksum: "sha256:{{ nextcloud_archive }}.sha256"
 
 - name: install nextcloud
-  unarchive: 
+  unarchive:
     src: /tmp/nextcloud.tar.bz2
     dest: /var/www
     remote_src: true
@@ -22,7 +22,7 @@
 
 - name: include selinux tasks
   include_tasks: selinux.yml
-  when: 
+  when:
     - (ansible_os_family == "RedHat")
     - ('status' in ansible_selinux)
     - (ansible_selinux.status == "enabled")

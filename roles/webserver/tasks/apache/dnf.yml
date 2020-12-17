@@ -1,5 +1,5 @@
 ---
-# dnf related tasks
+# dnf related OS tasks
 
 - name: install needed fedora packages
   dnf:

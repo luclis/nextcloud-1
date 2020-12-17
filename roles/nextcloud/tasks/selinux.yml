@@ -1,11 +1,12 @@
 ---
+# tasks file for activate selinux on nextcloud
 
 - name: selinux targets
   sefcontext:
     target: "{{ item }}"
     setype: httpd_sys_rw_content_t
     state: present
-  loop: 
+  loop:
     - '{{ nextcloud_data_dir }}(/.*)?'
     - "{{ nextcloud_www_dir }}/config(/.*)?"
     - "{{ nextcloud_www_dir }}/apps(/.*)?"
@@ -33,7 +34,7 @@
     - httpd-to-redis-socket.pp
     - httpd-to-upload-tmp.pp
 
-- name: restorecon 
+- name: restorecon
   command: restorecon -Rv {{ item }}
   loop:
     - "{{ nextcloud_www_dir }}"

@@ -175,6 +175,6 @@ install_fulltextsearch      = false
 
 ---------------
 
-If you find this Playbook helpful and want to donate something. Please go to this web page donate for children in need. 
+If you find this Playbook helpful and want to donate something. Please go to this web page donate for children in need.
 
 https://wir-fuer-kinder-in-not.org/ and click on "Spenden" (Donate)

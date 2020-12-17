@@ -1,5 +1,5 @@
 ---
-# yum related tasks (will use centos repo for Amazon Linux 2)
+# yum related OS tasks (will use centos repo for Amazon Linux 2)
 
 - name: add additional mariaddb repo
   yum_repository:
@@ -15,7 +15,7 @@
     name:
       - MariaDB-server
       - MariaDB-client
-    enablerepo: mariadb 
+    enablerepo: mariadb
     state: latest
   vars:
     ansible_python_interpreter: python2

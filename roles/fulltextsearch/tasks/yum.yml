@@ -1,4 +1,5 @@
 ---
+# yum related OS tasks
 
 - name: import elasticsearch rpm key
   rpm_key:
@@ -29,4 +30,3 @@
     state: latest
   vars:
     ansible_python_interpreter: python2
-

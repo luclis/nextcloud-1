@@ -9,7 +9,7 @@
   args:
     creates: /usr/share/elasticsearch/plugins/ingest-attachment
   notify: restart elasticsearch
-  
+
 - name: enable elasticsearch
   systemd:
     name: elasticsearch

@@ -1,5 +1,5 @@
 ---
-# tasks file for postgres
+# tasks file for postgreSQL
 
 - name: include os specific tasks
   include_tasks: "{{ ansible_pkg_mgr }}.yml"

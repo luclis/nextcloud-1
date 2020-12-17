@@ -39,7 +39,7 @@
     name: test
     state: absent
     login_unix_socket: "{{ mariadb_socket[ansible_distribution] }}"
-  
+
 - name: create nextcloud db
   mysql_db:
     name: "{{ nextcloud_db }}"
@@ -48,7 +48,7 @@
     login_unix_socket: "{{ mariadb_socket[ansible_distribution] }}"
 
 - name: generate db passwd if nextcloud_db_passwd is empty
-  set_fact: 
+  set_fact:
     nextcloud_db_passwd: "{{ lookup('password', '{{ credential_store }}/database_secret chars=ascii_letters,digits length=32') }}"
   when: nextcloud_db_passwd == ''
 

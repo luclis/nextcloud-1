@@ -25,7 +25,7 @@
     state: directory
 
 - name: create tls certificate (collabora code)
-  include_role: 
+  include_role:
     name: tls-certificate
 
 - name: include os specific tasks
@@ -62,4 +62,3 @@
   wait_for:
     host: localhost
     port: 9980
-

@@ -1,4 +1,5 @@
 ---
+# vars file for fulltextsearch
 
 elasticsearch_jdk_version:
   Debian:

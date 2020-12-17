@@ -2,7 +2,7 @@
 # performance and sercurity tuning
 
 - name: sysctl vm.overcommit_memory=1
-  sysctl: 
+  sysctl:
     name: vm.overcommit_memory
     value: "1"
     state: present
@@ -17,7 +17,7 @@
     reload: true
     sysctl_file: /etc/sysctl.conf
 
-- name: check /sys/kernel/mm/transparent_hugepage/enabled 
+- name: check /sys/kernel/mm/transparent_hugepage/enabled
   stat:
     path: /sys/kernel/mm/transparent_hugepage/enabled
   register: hugepage_enabled

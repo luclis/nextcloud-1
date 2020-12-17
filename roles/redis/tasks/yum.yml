@@ -1,6 +1,5 @@
 ---
-
-# yum related tasks
+# yum related OS tasks
 
 - name: install needed packages
   yum:
@@ -9,4 +8,3 @@
     enablerepo: "{{ redis_yum_repo[ansible_distribution] }}"
   vars:
     ansible_python_interpreter: python2
-

@@ -16,7 +16,7 @@
 
 - name: install mariadb-server packages
   apt:
-    name: 
+    name:
       - mariadb-server
       - mariadb-client
       - python3-pymysql

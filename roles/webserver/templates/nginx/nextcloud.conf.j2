@@ -40,12 +40,12 @@ server {
 		proxy_pass https://localhost:9980;
 		proxy_set_header Host $http_host;
 	}
-	
+
 	location ^~ /hosting/discovery {
 		proxy_pass https://localhost:9980;
 		proxy_set_header Host $http_host;
 	}
-	 
+
 	location ^~ /lool {
 		proxy_pass https://localhost:9980;
 		proxy_set_header Host $http_host;
@@ -53,7 +53,7 @@ server {
 		proxy_set_header Connection "upgrade";
 	}
 
-    
+
     location ^~ /hosting/capabilities {
         proxy_pass https://localhost:9980;
         proxy_set_header Host $http_host;

@@ -1,5 +1,5 @@
 ---
-# handlers file for loolwsd
+# handlers file for collabora
 
 - name: restart loolwsd
   systemd:

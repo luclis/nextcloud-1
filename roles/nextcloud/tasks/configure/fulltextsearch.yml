@@ -1,5 +1,4 @@
 ---
-
 # tasks to configure fulltextsearch
 
 - name: install fulltextsearch apps
@@ -81,4 +80,3 @@
     name: nextcloud-fulltext-elasticsearch-worker.service
     enabled: true
     state: started
-

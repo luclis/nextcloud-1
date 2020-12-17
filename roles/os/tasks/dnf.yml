@@ -1,5 +1,5 @@
 ---
-# yum related os tasks
+# dnf related OS tasks
 
 - name: install needed fedora os packages
   dnf:
@@ -15,7 +15,7 @@
       - facter
       - python3-policycoreutils
     state: latest
-    enablerepo: epel 
+    enablerepo: epel
 
 - name: update os
   dnf:

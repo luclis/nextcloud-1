@@ -1,6 +1,7 @@
 ---
+# Configure website for letsencrypt on apache
 
-- name: copy dummy cert 
+- name: copy dummy cert
   copy:
     src: "{{ item.file }}"
     dest: "{{ item.target }}"
@@ -33,7 +34,7 @@
       owner: root
       group: root
       mode: 0644
-  
+
   - name: enable letsencrypt alias
     file:
       src: "{{ apache_server_root[ansible_os_family] }}/conf-available/letsencrypt.conf"

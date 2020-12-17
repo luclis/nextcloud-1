@@ -1,5 +1,5 @@
 ---
-# yum related tasks
+# yum related OS tasks
 
 - name: Amazon related tasks
   block:
@@ -10,7 +10,7 @@
   - name: install needed packages amazon linux
     yum:
       name:
-#        - perl-File-FcntlLock 
+#        - perl-File-FcntlLock
         - ImageMagick
         - ghostscript
       state: latest
@@ -31,7 +31,7 @@
       name:
         - ghostscript
       state: latest
-      enablerepo: epel 
+      enablerepo: epel
 
   - name: install needed centos7 packages
     yum:
@@ -48,7 +48,7 @@
         - GraphicsMagick
         - policycoreutils-python-utils
       state: latest
-      enablerepo: epel 
+      enablerepo: epel
     when: ansible_distribution_major_version|int >= 8
 
   when: ansible_distribution == 'CentOS'
@@ -58,7 +58,7 @@
 
 - name: Fedora related tasks
   block:
-  - name: enable cronie 
+  - name: enable cronie
     systemd:
       name:    'crond.service'
       state:   'started'
@@ -66,11 +66,11 @@
   - name: install needed fedora packages
     yum:
       name:
-      - perl-File-FcntlLock 
+      - perl-File-FcntlLock
       - ImageMagick
       - ghostscript
       state: latest
-      enablerepo: epel 
+      enablerepo: epel
     vars:
       ansible_python_interpreter: python2
   when: ansible_distribution == 'Fedora'

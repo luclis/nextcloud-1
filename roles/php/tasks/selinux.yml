@@ -1,4 +1,5 @@
 ---
+# tasks file for activate selinux on php
 
 - name: selinux targets
   sefcontext:

@@ -20,7 +20,7 @@ php_yum_repo_name:
   Amazon: amzn2extra-php{{ php_version }}
   CentOS: remi-php{{ php_version | replace(".","") }}
   Fedora: remi-php{{ php_version | replace(".","") }}
-  
+
 
 php_db_extension:
   mysql: php{{ php_version }}-mysql
@@ -128,4 +128,3 @@ php_package_optional:
     - php-smbclient
     - php{{ php_version }}-ldap
     - php{{ php_version }}-imap
-

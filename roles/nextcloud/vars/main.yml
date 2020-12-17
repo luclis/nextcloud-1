@@ -7,4 +7,3 @@ imagemagick_xml_path:
   Amazon: /etc/ImageMagick/policy.xml
   Ubuntu: /etc/ImageMagick-6/policy.xml
   Debian: /etc/ImageMagick-6/policy.xml
-  

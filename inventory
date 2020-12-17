@@ -84,7 +84,7 @@ install_talk                    = false
 # more info about restic: https://restic.readthedocs.io/en/latest/
 # to use a local directory as a restic repository (not a good idea anyway)
 # example: restic_repo          = '/var/backups/nextcloud'
-restic_repo          = ''    
+restic_repo          = ''
 
 # use rclone to backup a cloud storage, see https://rclone.org for more details
 # configure also rclone_remote in group_vars/all.yml

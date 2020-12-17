@@ -1,6 +1,5 @@
 ---
-
-# apt related tasks on nextcloud server
+# apt related OS tasks
 
 - name: install additional packages
   apt:
@@ -10,7 +9,7 @@
       - bzip2
       - gnupg2
       - ffmpeg
-      - imagemagick 
+      - imagemagick
       - ghostscript
       - libfile-fcntllock-perl
     state: latest

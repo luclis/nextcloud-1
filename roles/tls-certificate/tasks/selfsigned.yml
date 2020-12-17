@@ -1,4 +1,5 @@
 ---
+# create ssl selfsigned certificates
 
 - name: create cert directory
   file:
@@ -9,7 +10,7 @@
     state: directory
   loop:
     - "{{ tls_certificate_file | dirname }}"
-    - "{{ tls_certificate_directory }}" 
+    - "{{ tls_certificate_directory }}"
 
 - name: generate an openssl ca key with the default values
   openssl_privatekey:
@@ -61,7 +62,7 @@
     dest: "{{ tls_certificate_fullchain }}"
     content: |
       {{ lookup('file', tls_certificate_ca ) }}
-      
+
       {{ lookup('file', tls_certificate_file ) }}
     owner: "{{ tls_certificate_owner | default('root') }}"
     group: "{{ tls_certificate_group | default('root') }}"

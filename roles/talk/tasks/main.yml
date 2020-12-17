@@ -1,5 +1,5 @@
 ---
-# tasks file for prep_talk
+# tasks file for talk
 
 - name: get my public ip
   ipify_facts:

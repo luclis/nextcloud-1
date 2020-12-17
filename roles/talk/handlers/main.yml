@@ -1,5 +1,5 @@
 ---
-# handlers file for prep_talk
+# handlers file for talk
 
 - name: restart coturn
   listen: restart coturn

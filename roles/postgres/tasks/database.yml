@@ -1,5 +1,4 @@
 ---
-
 # create nextcloud database
 
 - name: create {{ nextcloud_db }} db

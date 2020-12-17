@@ -1,5 +1,5 @@
 ---
-# defaults file for nginx
+# defaults file for webserver
 
 nextcloud_fqdn: ""
 

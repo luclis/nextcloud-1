@@ -1,6 +1,5 @@
 ---
-
-# Debian related OS tasks
+# apt related OS tasks
 
 - name: import elasticsearch signing key
   apt_key:
@@ -21,7 +20,7 @@
 
 - name: install elasticsearch packages
   apt:
-    name: 
+    name:
       - apt-transport-https
       - "{{ elasticsearch_jdk_version[ansible_distribution]['v' + ansible_distribution_major_version] }}"
       - elasticsearch

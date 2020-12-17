@@ -29,7 +29,7 @@
   include_tasks: firewall_config.yml
 
 - name: create tls certificate (webserver)
-  include_role: 
+  include_role:
     name: tls-certificate
 
 - name: include configuration tasks

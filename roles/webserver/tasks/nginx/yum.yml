@@ -1,5 +1,5 @@
 ---
-# yum related tasks
+# yum related OS tasks
 
 - name: add nginx yum repos
   yum_repository:
@@ -26,4 +26,3 @@
     enablerepo: nginx
   vars:
     ansible_python_interpreter: python2
-

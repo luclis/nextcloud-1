@@ -14,8 +14,8 @@
       - bzip2
       - software-properties-common
       - facter
-      - lsb-release 
-      - ssl-cert 
-      - ca-certificates 
-      - apt-transport-https 
+      - lsb-release
+      - ssl-cert
+      - ca-certificates
+      - apt-transport-https
     state: latest

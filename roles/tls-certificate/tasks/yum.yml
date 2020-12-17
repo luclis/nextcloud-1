@@ -1,5 +1,5 @@
 ---
-# apt related OS tasks
+# yum related OS tasks
 
 - name: install additional packages
   yum:
@@ -8,4 +8,3 @@
     state: latest
   vars:
     ansible_python_interpreter: python2
-

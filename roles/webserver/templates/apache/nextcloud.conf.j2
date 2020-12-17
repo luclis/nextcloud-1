@@ -18,7 +18,7 @@
     SSLOpenSSLConfCmd Curves X25519:secp521r1:secp384r1:prime256v1
 {% endif %}
     SSLHonorCipherOrder on
-    
+
     ServerAdmin admin@{{ nextcloud_fqdn }}
     ServerName {{ nextcloud_fqdn }}
 
@@ -39,20 +39,20 @@
 {% endif %}
     SetEnv HOME $NCPATH
     SetEnv HTTP_HOME $NCPATH
-    
+
     # The following lines prevent .htaccess and .htpasswd files from being
     # viewed by Web clients.
     <Files ".ht*">
     Require all denied
     </Files>
-    
+
     # Disable HTTP TRACE method.
     TraceEnable off
     # Disable HTTP TRACK method.
     RewriteEngine On
     RewriteCond %{REQUEST_METHOD} ^TRACK
     RewriteRule .* - [R=405,L]
-    
+
     # Avoid "Sabre\DAV\Exception\BadRequest: expected filesize XXXX got XXXX"
     <IfModule mod_reqtimeout.c>
     RequestReadTimeout body=0

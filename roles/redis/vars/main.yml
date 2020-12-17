@@ -11,5 +11,4 @@ redis_conf_path:
   Fedora: '/etc'
   Amazon: '/etc'
   Ubuntu: '/etc/redis'
-  Debian: '/etc/redis' 
-  
+  Debian: '/etc/redis'

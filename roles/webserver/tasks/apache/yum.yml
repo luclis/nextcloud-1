@@ -1,5 +1,5 @@
 ---
-# yum related tasks
+# yum related OS tasks
 
 - name: install needed centos packages
   yum:
@@ -11,4 +11,3 @@
     state: latest
   vars:
     ansible_python_interpreter: python2
-

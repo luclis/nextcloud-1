@@ -1,5 +1,5 @@
 ---
-# tasks file for onlyoffice configuration
+# tasks to configure Onlyoffice
 
 - name: install onlyoffice app
   become_user: "{{ web_user[nextcloud_webserver_type][ansible_os_family] }}"
@@ -10,7 +10,7 @@
     chdir: "{{ nextcloud_www_dir }}"
     creates: "{{ nextcloud_www_dir }}/apps/onlyoffice"
   ignore_errors: true
-  
+
 - name: enable onlyoffice app
   become_user: "{{ web_user[nextcloud_webserver_type][ansible_os_family] }}"
   become_flags: "{{ ansible_become_flags | default(omit) }}"
@@ -18,7 +18,7 @@
   shell: php occ app:enable onlyoffice
   args:
     chdir: "{{ nextcloud_www_dir }}"
-  
+
 - name: set onlyoffice server url
   become_user: "{{ web_user[nextcloud_webserver_type][ansible_os_family] }}"
   become_flags: "{{ ansible_become_flags | default(omit) }}"
@@ -39,7 +39,7 @@
   become_user: "{{ web_user[nextcloud_webserver_type][ansible_os_family] }}"
   become_flags: "{{ ansible_become_flags | default(omit) }}"
   become: yes
-  shell: php occ config:system:set onlyoffice verify_peer_off --value=true --type=boolean 
+  shell: php occ config:system:set onlyoffice verify_peer_off --value=true --type=boolean
   args:
     chdir: "{{ nextcloud_www_dir }}"
   when: ( nextcloud_certificate_type  == 'selfsigned' ) or ( nextcloud_certificate_test )

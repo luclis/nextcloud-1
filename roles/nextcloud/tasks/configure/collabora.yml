@@ -1,5 +1,5 @@
 ---
-# tasks file for collabora configuration
+# tasks to configure collabora
 
 - name: install collabora app
   become_user: "{{ web_user[nextcloud_webserver_type][ansible_os_family] }}"

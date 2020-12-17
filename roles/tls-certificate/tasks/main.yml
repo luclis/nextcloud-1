@@ -1,5 +1,4 @@
 ---
-
 # create ssl certificates
 
 - name: ensure "{{ tls_certificate_directory }}" exists
@@ -41,7 +40,7 @@
     path: "{{ tls_certificate_file }}"
   register: cert_info
   when: cert_file.stat.exists
-  
+
 - name: include certifictes tasks
   include_tasks: '{{ tls_certificate_type }}.yml'
   when: ( not cert_file.stat.exists ) or ( cert_info.expired )
